@@ -21,5 +21,4 @@ public class UserRestController {
 
         return json;
     }
-
 }
