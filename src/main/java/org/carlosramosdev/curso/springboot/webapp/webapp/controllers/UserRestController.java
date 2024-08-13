@@ -30,9 +30,7 @@ public class UserRestController {
         User user2 = new User("Iván", "Ramos", "Estudiante");
         User user3 = new User("Vicenta", "Iserte", "Hostelería");
 
-        List<User> users = Arrays.asList(user1,user2,user3);
-
-        return users;
+        return Arrays.asList(user1,user2,user3);
     }
 
     @GetMapping("/details.map")
