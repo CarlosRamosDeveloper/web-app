@@ -3,13 +3,18 @@ package org.carlosramosdev.curso.springboot.webapp.webapp.models;
 public class User {
     private String name;
     private String lastname;
-    private String ocupation;
+    private String occupation;
     private String email;
 
-    public User(String name, String lastname, String ocupation) {
+    public User(String name, String lastname, String occupation) {
         this.name = name;
         this.lastname = lastname;
-        this.ocupation = ocupation;
+        this.occupation = occupation;
+    }
+
+    public User(String name, String lastname, String occupation, String email) {
+        this(name, lastname, occupation);
+        this.email = email;
     }
 
     public String getName() {
@@ -28,12 +33,12 @@ public class User {
         this.lastname = lastname;
     }
 
-    public String getOcupation() {
-        return ocupation;
+    public String getOccupation() {
+        return occupation;
     }
 
-    public void setOcupation(String ocupation) {
-        this.ocupation = ocupation;
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
     }
 
     public String getEmail() {
