@@ -26,6 +26,7 @@ public class UserController {
     public String list(ModelMap model) {
         List<User> users = new ArrayList<>();
         model.addAttribute("users", users);
+        model.addAttribute("title", "Listado de usuarios");
 
         return "list";
     }
