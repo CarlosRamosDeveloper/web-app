@@ -4,6 +4,7 @@ public class User {
     private String name;
     private String lastname;
     private String ocupation;
+    private String email;
 
     public User(String name, String lastname, String ocupation) {
         this.name = name;
@@ -33,5 +34,13 @@ public class User {
 
     public void setOcupation(String ocupation) {
         this.ocupation = ocupation;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
