@@ -28,7 +28,7 @@ public class PathVariableController {
     }
     @PostMapping("/create")
     public User create(@RequestBody User user) {
-        //TODO hacer algo con el usuario
+        user.setName(user.getName().toUpperCase());
         return user;
     }
 }
