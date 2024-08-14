@@ -2,9 +2,7 @@ package org.carlosramosdev.curso.springboot.webapp.webapp.controllers;
 
 import org.carlosramosdev.curso.springboot.webapp.webapp.models.User;
 import org.carlosramosdev.curso.springboot.webapp.webapp.models.dto.UserDto;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.HashMap;
