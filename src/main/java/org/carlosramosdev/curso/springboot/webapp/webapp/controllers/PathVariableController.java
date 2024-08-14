@@ -2,6 +2,7 @@ package org.carlosramosdev.curso.springboot.webapp.webapp.controllers;
 
 import org.carlosramosdev.curso.springboot.webapp.webapp.models.User;
 import org.carlosramosdev.curso.springboot.webapp.webapp.models.dto.ParamDto;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -10,6 +11,18 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/var")
 public class PathVariableController {
+    @Value("${config.username}")
+    private String username;
+
+    @Value("${config.message}")
+    private String message;
+
+    @Value("${config.listOfValues}")
+    private String[] listOfValues;
+
+    @Value("${config.code}")
+    private Integer code;
+
     @GetMapping("/baz/{message}")
     public ParamDto baz(@PathVariable String message){
         ParamDto param = new ParamDto();
@@ -30,5 +43,16 @@ public class PathVariableController {
     public User create(@RequestBody User user) {
         user.setName(user.getName().toUpperCase());
         return user;
+    }
+
+    @GetMapping("/values")
+    public Map<String, Object> values(){
+        Map <String, Object> json = new HashMap<>();
+        json.put("username", username);
+        json.put("message", message);
+        json.put("code", code);
+        json.put("listOfValues", listOfValues);
+
+        return json;
     }
 }
