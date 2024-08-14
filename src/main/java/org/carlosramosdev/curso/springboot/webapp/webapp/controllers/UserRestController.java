@@ -44,13 +44,4 @@ public class UserRestController {
 
         return json;
     }
-
-    @GetMapping("/request")
-    public ParamMixDto request(HttpServletRequest request){
-        ParamMixDto params = new ParamMixDto();
-        params.setCode(Integer.parseInt(request.getParameter("code")));
-        params.setMessage(request.getParameter("message"));
-
-        return params;
-    }
 }
