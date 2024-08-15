@@ -27,6 +27,12 @@ public class PathVariableController {
     @Value("#{'${config.listOfValues}'.toUpperCase()}")
     private String valueString;
 
+    @Value("#{${config.valuesMap}}")
+    private Map<String,Object> valuesMap;
+
+    @Value("#{${config.valuesMap}.price}")
+    private long valuesPrice;
+
     @Value("${config.code}")
     private Integer code;
 
@@ -61,7 +67,8 @@ public class PathVariableController {
         json.put("listOfValues", listOfValues);
         json.put("valueList", valueList);
         json.put("valueString", valueString);
-
+        json.put("valuesMap", valuesMap);
+        json.put("valuesPrice",valuesPrice);
         return json;
     }
 }
