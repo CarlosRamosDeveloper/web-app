@@ -70,7 +70,7 @@ public class PathVariableController {
         json.put("message", message);
         json.put("Environment property", environment.getProperty("config.message"));
         json.put("code", code);
-        json.put("Environment code", Integer.parseInt(environment.getProperty("config.code")));
+        json.put("Environment code", environment.getProperty("config.code", Long.class));
         json.put("listOfValues", listOfValues);
         json.put("valueList", valueList);
         json.put("valueString", valueString);
