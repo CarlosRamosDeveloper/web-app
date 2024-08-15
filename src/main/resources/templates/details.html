@@ -17,8 +17,11 @@
     <li th:if="${user.email == null}" th:text="${'Usuario sin correo electrónico'}"></li>
 </ul>
 
-<a th:href="@{/list}">Ver listado</a><br>
+<a th:href="@{/list}">Ver listado</a>
+<br>
 <a th:href="@{/api/var/values}">Respuesta de la Api</a>
+<br>
+<a th:href="@{'/api/var/baz/'+${title}}">Respuesta api con valor inyectado</a>
 
 </body>
 </html>
